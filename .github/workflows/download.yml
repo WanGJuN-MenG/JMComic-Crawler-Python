@@ -25,7 +25,7 @@ jobs:
       
       # 固定值
       JM_DOWNLOAD_DIR: /home/runner/work/jmcomic/download/
-      ZIP_NAME: '本子.tar.gz'
+      ZIP_NAME: '本子.zip'
       UPLOAD_NAME: 'Click me to download'
 
     steps:
@@ -58,7 +58,7 @@ jobs:
       - name: 压缩文件
         run: |
           cd $JM_DOWNLOAD_DIR
-          tar -zcvf "../$ZIP_NAME" ./
+          zip "../$ZIP_NAME" ./
           mv "../$ZIP_NAME" .
 
       - name: 上传结果
