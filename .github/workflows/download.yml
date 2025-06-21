@@ -58,7 +58,7 @@ jobs:
       - name: 压缩文件
         run: |
           cd $JM_DOWNLOAD_DIR
-          zip "../$ZIP_NAME" ./
+          zip $ZIP_NAME ./
           mv "../$ZIP_NAME" .
 
       - name: 上传结果
